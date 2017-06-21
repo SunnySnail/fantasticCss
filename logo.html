@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>奇妙的css</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <!-- Vue logo -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="vue-logo"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #vue-logo {
+                width: 100px;
+                height: 116px;
+                background: #39b981;
+                background: linear-gradient(30deg, transparent 26px, #39b981 0) bottom left,
+                            linear-gradient(-30deg, transparent 26px, #39b981 0) bottom right,
+                            linear-gradient(150deg, transparent 26px, #39b981 0) top left,
+                            linear-gradient(-150deg, transparent 26px, #39b981 0) top right;
+                background-repeat: no-repeat;
+                background-size: 50% 50%;
+                position: relative;
+            }
+            #vue-logo::after {
+                position: absolute;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                content: '';
+                display: block;
+                width: 70px;
+                height: 60px;
+                background: linear-gradient(60deg, transparent 50%,#fff 0,#fff 70%, #34485e 0,#34485e 90%, transparent 0) bottom left,
+                            linear-gradient(-60deg, transparent 50%,#fff 0,#fff 70%, #34485e 0,#34485e 90%, transparent 0) bottom right;
+                background-repeat: no-repeat;
+                background-size: 50% 100%;
+            }
+        </style>
+    </section>
+
+    <!-- 自选股 logo -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="zixuangu-logo">
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #zixuangu-logo {
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(#ea3700 20%, transparent 0),
+                            linear-gradient(#eee 1px, transparent 0) 0/100% 20px,
+                            linear-gradient(90deg, #eee 1px, transparent 0) 0/20px 100%;
+                border-radius: 20px;
+                border: 1px solid #eee;
+                position: relative;
+            }
+            #zixuangu-logo::after {
+                position: absolute;
+                left: 0;
+                bottom: 10px;
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: linear-gradient(-45deg, transparent 6px, #ea3700 0, #ea3700 14px, transparent 0) bottom right,
+                            linear-gradient(45deg, transparent 6px, #ea3700 0, #ea3700 14px, transparent 0) bottom left;
+                background-size: 50% 100%;
+                background-repeat: no-repeat;
+                background-position: 0 0, 100% 100%;
+            }
+
+            #zixuangu-logo::before {
+                position: absolute;
+                left: 20px;
+                bottom: 10px;
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                background: linear-gradient(-45deg, transparent 6px, #ea3700 0, #ea3700 14px, transparent 0) bottom right,
+                            linear-gradient(45deg, transparent 6px, #ea3700 0, #ea3700 14px, transparent 0) bottom left;
+                background-size: 50% 100%;
+                background-repeat: no-repeat;
+                background-position: 0 0, 100% 100%;
+            }
+
+            #zixuangu-logo .arrow {
+                width: 50px;
+                height: 60px;
+                background: linear-gradient(-45deg, transparent 53px, #ea3700 0, #ea3700 60px, transparent 0);
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                left: 40px;
+                background-position: 0 0;
+                position: absolute;
+                bottom: -15px;
+            }
+
+            #zixuangu-logo .arrow::after {
+                content: '';
+                display: block;
+                background-color: #ea3700;
+                clip-path: polygon(0 0, 100% 0, 100% 100%);
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                right: 13px;
+                top: -7px;
+            }
+        </style>
+    </section>
+</body>
+</html>

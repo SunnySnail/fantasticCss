@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>奇妙的css</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+    <!-- 透明边框 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <img id="subtransparent-img" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497801063128&di=7e524afacc5a9113dfdc8ef2571c0aae&imgtype=0&src=http%3A%2F%2Fpic.10huan.com%2Fpic2015%2Fb%2Fr%2F06%2F11%2F18%2F22611149.jpg">
+            <div id="subtransparent-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+
+            #subtransparent-img {
+                width: 150px;
+            }
+
+            #subtransparent-border {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: #fff;
+                border: 10px solid rgba(255,255,255,0.4);
+                background-clip: padding-box;
+            }
+        </style>
+    </section>
+
+    <!-- 多重边框 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="multi-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+
+            #multi-border {
+                width: 50px;
+                height: 50px;
+                background-color: #58a;
+                box-shadow: 0 0 0 6px yellowgreen,
+                            0 0 0 12px deeppink,
+                            0 0 0 18px #e283ab,
+                            0 0 0 24px #d458e4;
+            }
+        </style>
+    </section>
+
+    <!-- 边框 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="outline-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #outline-border {
+                width: 100px;
+                height: 100px;
+                background: #655;
+                border: 10px solid #655;
+                border-radius: 10px;
+                outline: 1px dashed #fff;
+                outline-offset: -10px;
+            }
+        </style>
+    </section>
+
+    <!-- 圆角边框 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="radius-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #radius-border {
+                width: 100px;
+                height: 100px;
+                background: #655;
+                border: 5px solid #655;
+                border-radius: 10px;
+                box-shadow: 0 0 0 5px #58a;
+                outline: 8px solid #58a;
+            }
+        </style>
+    </section>
+
+    <!-- 水平条纹背景 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="horizon-stripe-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #horizon-stripe-border {
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(#fb3 30%, #58a 0, #58a 70%, yellowgreen 0);
+                background-size: 100% 30px;
+            }
+        </style>
+    </section>
+
+    <!-- 垂直条纹背景 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="vertical-stripe-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #vertical-stripe-border {
+                width: 100px;
+                height: 100px;
+                background: linear-gradient(90deg, #fb3 50%, #58a 0);
+                background-size: 30px 100%;
+            }
+        </style>
+    </section>
+
+    <!-- 斜向条纹背景 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="slant-stripe-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #slant-stripe-border {
+                width: 200px;
+                height: 100px;
+                background: linear-gradient(60deg, #fb3 20%, #58a 0, #58a 40% ,#fb3 0, #fb3 60%, #58a 0,#58a 80%, #fb3 0);
+                background-size: 100% 100%;
+            }
+        </style>
+    </section>
+
+    <!-- 斜向条纹进度条 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="slant-stripe-progress"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            @keyframes scroll {
+                to {
+                    background-position: 100%;
+                }
+            }
+            #slant-stripe-progress {
+                width: 200px;
+                height: 10px;
+                background: repeating-linear-gradient(45deg,
+                                            #58a 0,
+                                            #58a 25%,
+                                            #fb3 0,
+                                            #fb3 50%) 0 / 20px 20px;
+                border-radius: 10px;
+                animation: scroll 3s linear infinite;
+            }
+        </style>
+    </section>
+
+    <!-- 网格背景 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="grid-background"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #grid-background {
+                width: 100px;
+                height: 100px;
+                background-color: #fff;
+                background-image: linear-gradient(90deg, rgba(200,0,0,.5) 50%, transparent 0),
+                                  linear-gradient(rgba(200,0,0,.5) 50%, transparent 0);
+                background-size: 30px 30px;
+            }
+        </style>
+    </section>
+
+    <!-- 波点背景 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="dot-background"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #dot-background {
+                width: 100px;
+                height: 100px;
+                background-color: #e24c89;
+                background-image: radial-gradient(#f3e696 30%, transparent 0),
+                                  radial-gradient(#f3e696 30%, transparent 0);
+                background-size: 30px 30px;
+                background-position: 0 0, 15px 15px;
+            }
+        </style>
+    </section>
+
+    <!-- 棋盘背景 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="chessboard-background"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #chessboard-background {
+                width: 100px;
+                height: 100px;
+                background-color: #eee;
+                background-image: linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0,transparent 75%,rgba(0,0,0,.25) 0),
+                                  linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0,transparent 75%,rgba(0,0,0,.25) 0);
+                background-size: 30px 30px;
+                background-position: 0 0, 15px 15px;
+            }
+        </style>
+    </section>
+
+    <!-- 棋盘背景 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="chessboard1-background"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            #chessboard1-background {
+                width: 100px;
+                height: 100px;
+                background-image: linear-gradient(45deg, rebeccapurple 25%, transparent 0,transparent 75%,rebeccapurple 0),
+                                  linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0,transparent 75%,rgba(0,0,0,.25) 0);
+                background-size: 30px 30px;
+                background-position: 0 0, 15px 15px;
+            }
+        </style>
+    </section>
+
+    <!-- 边框条纹 -->
+    <section class="code-wrap">
+        <div class="show-part">
+            <div id="stripe-border"></div>
+        </div>
+        <style class="code-part" contenteditable="true">
+            @keyframes ant {
+                to {
+                    background-position: 100%;
+                }
+            }
+            #stripe-border {
+                width: 200px;
+                height: 100px;
+                border: 5px solid transparent;
+                background: linear-gradient(white, white) padding-box,
+                            repeating-linear-gradient(-45deg,
+                              red 0, red 12.5%,
+                              transparent 0, transparent 25%,
+                              #58a 0, #58a 37.5%,
+                              transparent 0, transparent 50%) 0 / 50px 50px;
+                animation: ant 2s linear infinite;
+            }
+        </style>
+    </section>
+</body>
+</html>
